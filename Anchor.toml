@@ -1,0 +1,21 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+anchor_vault_k = "J7WXWVRDufJgboFhX26dnEsi9mr3dyY6Ch293kHfeKbG"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+
+[scripts]
+test = "node_modules/.bin/vitest run"
+testlitesvm = "cargo test -- --nocapture"
+
+
+[hooks]
